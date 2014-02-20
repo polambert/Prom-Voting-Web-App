@@ -1,4 +1,7 @@
 <?php
+  //simply starting the session so I can request data later.
+  session_start();
+
   /*It's Easier to just require the connection file then putting the connection script on every page. All it does is include 
   the database host,user,password,and name. Then it simply connects to the databse. You can add in checking for connection
   errors if you'd like
@@ -15,7 +18,8 @@
   mysql_real_escape_string($name_Search);
   
   /*This block of code connects to our databse, again if you want to check for errors please do, but I know my server will
-  be working. After connecting to our database it runs the search query trying to find the srudents name.*/
+  be working. After connecting to our database it runs the search query trying to find the srudents name.
+  */
   mysql_select_db($db_Name);
   $search_Data="SELECT * FROM Student_Names Where First_Name && Last_Name LIKE '$name_Search'";
   
@@ -34,6 +38,13 @@
       if($search_Results>=1){
         while($search_Results_Output){
           echo $search_Results_Output['Name'];
+          /*I give the choice to the user to pick if its there name, obviously this would be on the honor system and 
+          an admin will be there to make sure the user votes once. You can simply replace the text and or add an image 
+          into the link. I set the search data to a varibale, so then I sent the name to the session so I can access 
+          it later.
+          */
+          $Name=$search_Results_Output['Name'];
+          echo "<a href='voting.php?Name=$Name'><font>I'm this student</font></a>";
         }
       }else{
         echo 'Name not found.';
