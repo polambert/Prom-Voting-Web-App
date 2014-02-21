@@ -13,3 +13,10 @@
   
   //Waiting on GUI to be finished to continue any more.
 ?>
+<html>
+  <head>
+    <title>FMHS Prom Voting</title>
+  </head>
+  <body>
+  </body>
+</html>
