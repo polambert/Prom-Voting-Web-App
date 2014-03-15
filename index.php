@@ -1,7 +1,7 @@
 <!--
 ALL CODE INCLUDED IS WRITTEN UNDER THE OPEN SOURCE SOFTWARE INTIATIVE, PLEASE
 USE THE CODE AS YOU WOULD LIKE. ALL CODE, GUI, IMAGES, AND OTHER DATA INCLUDED IN 
-THIS WEB APP IS OPEN SOURCE. CREATED BY: DAVID JOHNSON AND LYNN SMITH.*/
+THIS WEB APP IS OPEN SOURCE. CREATED BY: DAVID JOHNSON*/
 	
 //CODE STARTS BELOW HERE//
 -->
@@ -10,10 +10,7 @@ THIS WEB APP IS OPEN SOURCE. CREATED BY: DAVID JOHNSON AND LYNN SMITH.*/
 	
 		$name = $_POST['studentName'];
 		
-		$databaseHost = "localhost";
-		$databaseUser = "root";
-		$databasePassword = "";
-		$databaseName = "prom";
+		require 'scripts/connection.php';
 		
 		$connection = mysql_connect($databaseHost,$databaseUser,$databasePassword);
 		
@@ -33,11 +30,11 @@ THIS WEB APP IS OPEN SOURCE. CREATED BY: DAVID JOHNSON AND LYNN SMITH.*/
 		<link rel="stylesheet" type="text/css" href="stylesheet.css">
 		<link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono:700' rel='stylesheet' type='text/css'>
   </head>
-  <body bgcolor="#9B59B6">
+  <body bgcolor="#22313F">
 		<center>
 			<div id="wrap">
 				<div id="header">
-					<div class="fontHeaderWhite">FMHS Prom</div>
+					<div class="fontHeaderPurple">FMHS Prom</div>
 				</div>
 				<div id="main">
 					<br>
@@ -68,8 +65,11 @@ THIS WEB APP IS OPEN SOURCE. CREATED BY: DAVID JOHNSON AND LYNN SMITH.*/
 									echo "<table><tr><td>";
 									echo "<br><div class='fontRegularWhite'>".$names['name']."</div></br></td>";
 									$names = $names['name'];
-									echo "<td><a href='sub/delete.php?name=$names'><img src='img/name.png' width='150%' class='styleSearchBoxButton'></a></td></tr><table>";
+									echo "<td><a href='scripts/removeStudent.php?name=$names'><img src='img/name.png' width='150%' class='styleSearchBoxButton'></a></td></tr><table>";
 								}
+							}
+							else{
+								echo "<br><div class='fontHeaderWhite'> Name not found! </div></br>";	
 							}
 						}
 					?>
@@ -78,6 +78,7 @@ THIS WEB APP IS OPEN SOURCE. CREATED BY: DAVID JOHNSON AND LYNN SMITH.*/
 					<br>
 					<br>
 					<div class="fontFooterWhite">Created By David Johnson</div>
+					<br>
 				</div>
 			</div>
 		</center>
