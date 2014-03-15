@@ -6,54 +6,80 @@ THIS WEB APP IS OPEN SOURCE. CREATED BY: DAVID JOHNSON AND LYNN SMITH.*/
 //CODE STARTS BELOW HERE//
 -->
 <?php
-	if (!empty($_POST['studentName'])){
+	if (isset($_POST['studentName'])){
 	
-		//Taking the search data and setting it to a variable
-		$nameSearch = $_POST['studentName'];
-			
-		/*This is basically making sure the variables are clean of any malicious code that could harm the server, in this case
-		not much security is needed.*/
-		htmlentities($nameSearch);
-		mysql_real_escape_string($nameSearch);
-			
-		$searchData = "SELECT * FROM studentNames Where First_Name && Last_Name LIKE '$nameSearch'";
-			
-		//This line is checking to see how many rows if any have been found from the search query.
-		$searchResults = mysql_num_rows($searchData);
+		$name = $_POST['studentName'];
+		
+		$databaseHost = "localhost";
+		$databaseUser = "root";
+		$databasePassword = "";
+		$databaseName = "prom";
+		
+		$connection = mysql_connect($databaseHost,$databaseUser,$databasePassword);
+		
+		mysql_select_db($databaseName);
+		
+		$findStudent = "SELECT name FROM promnames WHERE name LIKE '%".$name."%'";
+		
+		$runFindStudent = mysql_query($findStudent);
+		
+		$rowsFound = mysql_num_rows($runFindStudent);
+		
 	}
 ?>
 <html>
   <head>
     <title> FMHS Prom Voting </title>
+		<link rel="stylesheet" type="text/css" href="stylesheet.css">
+		<link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono:700' rel='stylesheet' type='text/css'>
   </head>
-  <body>
+  <body bgcolor="#9B59B6">
 		<center>
-			<form method="POST" action="index.php">
-			<input type="text" name="studentName">
-			<input type="button" value="Submit">
-			
-			<?php
-				if (!empty($_POST['studentName'])){
-				
-					/*This block is checking to see if any results did actually come up in the search. If they did it will move into
-					a while loop displaying all of the search results, if there are no results for the searched name then it will
-					display a message saying no results were found*/
-					if($searchResults >= 1){
-						while($searchResultsOutput = mysql_fetch_array($searchData)){
-								
-							/*I give the choice to the user to pick if its there name, obviously this would be on the honor system and 
-							an admin will be there to make sure the user votes once. You can simply replace the text and or add an image 
-							into the link. I set the search data to a variable, so then I sent the name to the session so I can access 
-							it later.*/
-							$name = $searchResultsOutput['Name'];
-							echo "<a href='voting.php?Name=$Name'><font>I'm this student</font></a>";
-							
-							}else{
-								echo 'Name not found.';
+			<div id="wrap">
+				<div id="header">
+					<div class="fontHeaderWhite">FMHS Prom</div>
+				</div>
+				<div id="main">
+					<br>
+					<br>
+					<div class="fontHeaderWhite">Search your first or last name</div>
+					<br>
+					<form method="POST" action="index.php">
+					<table>
+						<tr>
+							<td align="center">
+								<input class="styleSearchBox" type="text" name="studentName">
+							</td>
+							<td align="center">
+								<input type="image" src="img/search.png" width="150%" class="styleSearchBoxButton">
+							</td>
+						</tr>
+					</table>
+					</form>
+					<br>
+					<br>
+					<br>
+					<br>
+					<?php
+						if (isset($_POST['studentName'])){
+							if ($rowsFound > 0){
+								echo "<br><div class='fontHeaderWhite'> Press the person button is you find your name.</div></br>";								
+								while ($names = mysql_fetch_array($runFindStudent)){
+									echo "<table><tr><td>";
+									echo "<br><div class='fontRegularWhite'>".$names['name']."</div></br></td>";
+									$names = $names['name'];
+									echo "<td><a href='sub/delete.php?name=$names'><img src='img/name.png' width='150%' class='styleSearchBoxButton'></a></td></tr><table>";
+								}
 							}
 						}
-					}
-				?>
+					?>
+					<br>
+					<br>
+					<br>
+					<br>
+					<div class="fontFooterWhite">Created By David Johnson</div>
+				</div>
+			</div>
 		</center>
   </body>
 </html>

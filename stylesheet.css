@@ -1,0 +1,58 @@
+#wrap{
+	width:100%;
+}
+
+#header{
+	width:100%;
+	background-color:#F4D03F;
+}
+
+#main{
+	width:100%;
+	background-color:#9B59B6;
+}
+
+.fontHeaderPurple{
+	color:#9B59B6;
+	font-size: 4em;
+	font-family: 'Ubuntu Mono', sans-serif;
+}
+
+.fontHeaderWhite{
+	color:#ffffff;
+	font-size: 4em;
+	font-family: 'Ubuntu Mono', sans-serif;
+}
+
+.fontRegularWhite{
+	color:#ffffff;
+	font-size: 2.5em;
+	font-family: 'Ubuntu Mono', sans-serif;
+}
+
+.fontFooterWhite{
+	color:#ffffff;
+	font-size: 1em;
+	font-family: 'Ubuntu Mono', sans-serif;
+}
+
+.styleSearchBoxButton{
+
+	text-align: center;
+	vertical-align: middle;
+	line-height: 85px; 
+}
+
+.styleSearchBox{
+	width: 350px;
+	height: 75px;
+	border: 1px double #ffffff; 
+	border-radius: 12px; 
+	box-shadow: 0 0 3px #ffffff; 
+	font-size: 45px;
+	color: #9B59B6; 
+	outline: none; 
+	text-align: center;
+	vertical-align: middle;
+	line-height: 85px; 
+}
