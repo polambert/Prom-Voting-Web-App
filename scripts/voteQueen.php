@@ -1,4 +1,5 @@
 <?php
+	//check the voteKing.php file if this needs to be explained.
 	$name = $_REQUEST['name'];
 	
 	require 'connection.php';
