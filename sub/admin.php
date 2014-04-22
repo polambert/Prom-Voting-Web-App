@@ -1,128 +1,125 @@
 <?php
+  
+  /*
+    ALL CODE INCLUDED IS WRITTEN UNDER THE OPEN SOURCE SOFTWARE INTIATIVE, PLEASE
+    USE THE CODE AS YOU WOULD LIKE. ALL CODE, GUI, IMAGES, AND OTHER DATA INCLUDED IN 
+    THIS WEB APP IS OPEN SOURCE. CREATED BY: DAVID JOHNSON AND LYNN SMITH.*/
+	
+    //CODE STARTS BELOW HERE//
+
+  */
 
   //getting the connection variables 
-	include '../scripts/connection.php';
+  include '../scripts/connection.php';
 	
   //connecting to the
-	$connection = mysql_connect($databaseHost,$databaseUser,$databasePassword);
+  $connection = mysql_connect($databaseHost,$databaseUser,$databasePassword);
 		
   //selecting the prom database
-	mysql_select_db($databaseName);
+  mysql_select_db($databaseName);
 	
   /*Since the next 8 functions are exactly the same logic, I will only comment one
   of the functions.*/
-	function voteNick(){
+  function voteNick(){
     
     //setting the variable to the mysql server 
-		$pullKingVotesNick = "SELECT * FROM resultsking WHERE name = 'Nick'";
+    $pullKingVotesNick = "SELECT * FROM resultsking WHERE name = 'Nick'";
 		
     //running the query and then setting it to a variable
-		$runPullKingVotesNick = mysql_query($pullKingVotesNick);
+    $runPullKingVotesNick = mysql_query($pullKingVotesNick);
 		
     //finds the number of votes or rows matching the canidates name 
-		$votesNick = mysql_num_rows($runPullKingVotesNick);
+    $votesNick = mysql_num_rows($runPullKingVotesNick);
 		
     //returning the value
-		return $votesNick;
-	}
+    return $votesNick;
+  }
 	
-	function voteClay(){
+  function voteClay(){
 	
-		$pullKingVotesClay = "SELECT * FROM resultsking WHERE name = 'Clay'";
+    $pullKingVotesClay = "SELECT * FROM resultsking WHERE name = 'Clay'";
 		
-		$runPullKingVotesClay = mysql_query($pullKingVotesClay);
+    $runPullKingVotesClay = mysql_query($pullKingVotesClay);
 		
-		$votesClay = mysql_num_rows($runPullKingVotesClay);
+    $votesClay = mysql_num_rows($runPullKingVotesClay);
 		
-		return $votesClay;
-	}
+    return $votesClay;
+  }
 	
-	function voteTrevor(){
+  function voteTrevor(){
 	
-		$pullKingVotesTrevor = "SELECT * FROM resultsking WHERE name = 'Trevor'";
+    $pullKingVotesTrevor = "SELECT * FROM resultsking WHERE name = 'Trevor'";
 		
-		$runPullKingVotesTrevor = mysql_query($pullKingVotesTrevor);
+    $runPullKingVotesTrevor = mysql_query($pullKingVotesTrevor);
 		
-		$votesTrevor = mysql_num_rows($runPullKingVotesTrevor);
+    $votesTrevor = mysql_num_rows($runPullKingVotesTrevor);
 		
-		return $votesTrevor;
-	}
+    return $votesTrevor;
+  }
 	
-	function voteKyle(){
+  function voteKyle(){
 	
-		$pullKingVotesKyle = "SELECT * FROM resultsking WHERE name = 'Kyle'";
+    $pullKingVotesKyle = "SELECT * FROM resultsking WHERE name = 'Kyle'";
 		
-		$runPullKingVotesKyle = mysql_query($pullKingVotesKyle);
+    $runPullKingVotesKyle = mysql_query($pullKingVotesKyle);
 		
-		$votesKyle = mysql_num_rows($runPullKingVotesKyle);
+    $votesKyle = mysql_num_rows($runPullKingVotesKyle);
 		
-		return $votesKyle;
-	}
+    return $votesKyle;
+  }
+		
+  function voteJamie(){
 	
+    $pullKingVotesJamie = "SELECT * FROM resultsqueen WHERE name = 'Jamie'";
+		
+    $runPullKingVotesJamie = mysql_query($pullKingVotesJamie);
+		
+    $votesJamie = mysql_num_rows($runPullKingVotesJamie);
+		
+    return $votesJamie;
+  }
 	
-	function voteLiza(){
+  function voteChelsea(){
 	
-		$pullKingVotesLiza = "SELECT * FROM resultsqueen WHERE name = 'Liza'";
+    $pullKingVotesChelsea = "SELECT * FROM resultsqueen WHERE name = 'Chelsea'";
 		
-		$runPullKingVotesLiza = mysql_query($pullKingVotesLiza);
+    $runPullKingVotesChelsea = mysql_query($pullKingVotesChelsea);
 		
-		$votesLiza = mysql_num_rows($runPullKingVotesLiza);
+    $votesChelsea = mysql_num_rows($runPullKingVotesChelsea);
 		
-		return $votesLiza;
-	}
+    return $votesChelsea;
+  }
 	
-	function voteJamie(){
+  function voteMeagan(){
 	
-		$pullKingVotesJamie = "SELECT * FROM resultsqueen WHERE name = 'Jamie'";
+    $pullKingVotesMeagan = "SELECT * FROM resultsqueen WHERE name = 'Meagan'";
 		
-		$runPullKingVotesJamie = mysql_query($pullKingVotesJamie);
+    $runPullKingVotesMeagan = mysql_query($pullKingVotesMeagan);
 		
-		$votesJamie = mysql_num_rows($runPullKingVotesJamie);
+    $votesMeagan = mysql_num_rows($runPullKingVotesMeagan);
 		
-		return $votesJamie;
-	}
+    return $votesMeagan;
+  }
 	
-	function voteChelsea(){
-	
-		$pullKingVotesChelsea = "SELECT * FROM resultsqueen WHERE name = 'Chelsea'";
-		
-		$runPullKingVotesChelsea = mysql_query($pullKingVotesChelsea);
-		
-		$votesChelsea = mysql_num_rows($runPullKingVotesChelsea);
-		
-		return $votesChelsea;
-	}
-	
-	function voteMeagan(){
-	
-		$pullKingVotesMeagan = "SELECT * FROM resultsqueen WHERE name = 'Meagan'";
-		
-		$runPullKingVotesMeagan = mysql_query($pullKingVotesMeagan);
-		
-		$votesMeagan = mysql_num_rows($runPullKingVotesMeagan);
-		
-		return $votesMeagan;
-	}
-	
-	/*I have the same thing here where the two functions are about the same so I will only comment the 
+  /*I have the same thing here where the two functions are about the same so I will only comment the 
   first function.*/
-	function currentKing(){
+  function currentKing(){
 		
     //sets all of the functions to a variable to compare the amount of votes
-		$votesNick = voteNick();
-		$votesClay = voteClay();
-		$votesTrevor = voteTrevor();
-		$votesKyle = voteKyle();
+    $votesNick = voteNick();
+    $votesClay = voteClay();
+    $votesTrevor = voteTrevor();
+    $votesKyle = voteKyle();
 		
     //setting up the array
-		$kings = array("Nick Headden" => $votesNick, "Clay Pratt" => $votesClay, "Trevor Pickett" => $votesTrevor, "Kyle Brooks" => $votesKyle);
+    $kings = array("Nick Headden" => $votesNick, "Clay Pratt" => $votesClay, "Trevor Pickett" => $votesTrevor, "Kyle Brooks" => $votesKyle);
 		
     //finding the max value
-		$maxs = array_keys($kings, max($kings));
+    $maxs = array_keys($kings, max($kings));
 		
     //echoing the key from the max function
-		echo $maxs[0];
-	}
+    echo $maxs[0];
+  }
 	
 	function currentQueen(){
 		
