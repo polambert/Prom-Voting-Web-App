@@ -121,149 +121,155 @@
     echo $maxs[0];
   }
 	
-	function currentQueen(){
+  function currentQueen(){
 		
-		$votesLiza = voteLiza();
-		$votesJamie = voteJamie();
-		$votesChelsea = voteChelsea();
-		$votesMeagan = voteMeagan();
+    $votesJamie = voteJamie();
+    $votesChelsea = voteChelsea();
+    $votesMeagan = voteMeagan();
 		
-		$queens = array("Liza Walker" => $votesLiza, "Jamie Davis" => $votesJamie, "Chelsea Helms" => $votesChelsea, "Meagan Savage" => $votesMeagan);
+    $queens = array("Jamie Davis" => $votesJamie, "Chelsea Helms" => $votesChelsea, "Meagan Savage" => $votesMeagan);
 		
-		$maxs = array_keys($queens, max($queens));
+    $maxs = array_keys($queens, max($queens));
 		
-		echo $maxs[0];
-	}
+    echo $maxs[0];
+  }
 	
-	function queenkingRows(){
+  function queenkingRows(){
 		
-		$findRowsKing = "SELECT * FROM resultsking";
+    $findRowsKing = "SELECT * FROM resultsking";
 		
-		$runFindRowsKing = mysql_query($findRowsKing);
+    $runFindRowsKing = mysql_query($findRowsKing);
 		
-		$totalRowsKing = mysql_num_rows($runFindRowsKing); 
+    $totalRowsKing = mysql_num_rows($runFindRowsKing); 
 		
-		$findRowsQueen = "SELECT * FROM resultsqueen";
+    $findRowsQueen = "SELECT * FROM resultsqueen";
 		
-		$runFindRowsQueen = mysql_query($findRowsQueen);
+    $runFindRowsQueen = mysql_query($findRowsQueen);
 		
-		$totalRowsQueen = mysql_num_rows($runFindRowsQueen); 
+    $totalRowsQueen = mysql_num_rows($runFindRowsQueen); 
 		
-		$totalRows = $totalRowsKing + $totalRowsQueen;
-		echo $totalRows;
-	}
+    $totalRows = $totalRowsKing + $totalRowsQueen;
+    echo $totalRows;
+  }
 	
 ?>
 <html>
   <head>
     <title> FMHS Prom Voting </title>
-		<link rel="stylesheet" type="text/css" href="../stylesheet.css">
-		<link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono:700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="../stylesheet.css">
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono:700' rel='stylesheet' type='text/css'>
   </head>
-  <body bgcolor="#22313F">
-		<center>
-			<div id="wrap">
-				<div id="header">
-					<div class="fontHeaderPurple">FMHS Prom</div>
-				</div>
-				<div id="main">
-					<br>
-					<br>
-					<br>
-					<br>
-					<div class='fontRegularWhite'> Total Votes: <?php queenkingRows(); ?></div>
-					<br>
-					<br>
-					<br>
-					<table width="90%">
-						<tr>
-							<td align="center" width="50%">
-								<div class='fontRegularWhite'> Current King is <?php currentKing(); ?></div>
-								<table cellspacing="100" lign="center">
-									<tr>
-										<td width="50%" align="center">
-											<div class="circleDefault"></div>
-											<br>
-											<?php
-												echo "<div class='fontRegularWhite'> Nick Headden: ".$votesNick = voteNick()."</div>";
-											?>
-										</td>
-										<td width="50%" align="center">
-											<div class="circleDefault"></div>
-											<br>
-											<?php
-												echo "<div class='fontRegularWhite'> Clay Pratt: ".$votesClay = voteClay()."</div>";
-											?>
-										</td>
-									</tr>
-									<tr>
-										<td width="50%" align="center">
-											<div class="circleDefault"></div>
-											<br>
-											<?php
-												echo "<div class='fontRegularWhite'> Trevor Pickett: ".$votesTrevor = voteTrevor()."</div>";
-											?>
-										</td>
-										<td width="50%" align="center">
-											<div class="circleDefault"></div>
-											<br>
-											<?php
-												echo "<div class='fontRegularWhite'> Kyle Brooks: ".$votesKyle = voteKyle()."</div>";
-											?>
-										</td>
-									</tr>
-								</table>
-							</td>
-						</tr>
-						<tr>
-							<td align="center"  width="50%">
-								<div class='fontRegularWhite'> Current Queen is <?php currentQueen(); ?></div>
-								<br>
-								<table cellspacing="100" lign="center">
-									<tr>
-										<td width="50%" align="center">
-											<a href="../scripts/voteQueen.php?name=Liza"><div class="circleDefault"></div></a>
-											<br>
-											<?php
-												echo "<div class='fontRegularWhite'> Liza Walker: ".$votesLiza = voteLiza()."</div>";
-											?>
-										</td>
-										<td width="50%" align="center">
-											<a href="../scripts/voteQueen.php?name=Jamie"><div class="circleDefault"></div></a>
-											<br>
-											<?php
-												echo "<div class='fontRegularWhite'> Jamie Davis: ".$votesJamie = voteJamie()."</div>";
-											?>
-										</td>
-									</tr>
-									<tr>
-										<td width="50%" align="center">
-											<a href="../scripts/voteQueen.php?name=Chelsea"><div class="circleDefault"></div></a>
-											<br>
-											<?php
-												echo "<div class='fontRegularWhite'> Chelsea Helms: ".$votesChelsea = voteChelsea()."</div>";
-											?>
-										</td>
-										<td width="50%" align="center">
-											<a href="../scripts/voteQueen.php?name=Meagan"><div class="circleDefault"></div></a>
-											<br>
-											<?php
-												echo "<div class='fontRegularWhite'> Meagan Savage: ".$votesMeagan = voteMeagan()."</div>";
-											?>
-										</td>
-									</tr>
-								</table>
-							</td>
-						</tr>
-					</table>
-					<br>
-					<br>
-					<br>
-					<br>
-					<div class="fontFooterWhite">Created By David Johnson</div>
-					<br>
-				</div>
-			</div>
-		</center>
+  <body bgcolor="#506dff">
+    <center>
+      <div id="wrap">
+	<div id="header">
+	  <div class="fontHeaderPurple">FMHS Prom</div>
+	</div>
+	<div id="main">
+	  <br>
+	  <br>
+	  <br>
+	  <br>
+	  <div class='fontRegularWhite'> Total Votes: <?php queenkingRows(); ?></div>
+	  <br>
+	  <br>
+	  <br>
+	  <table width="90%">
+	    <tr>
+	      <td align="center" width="50%">
+		<div class='fontRegularWhite'> Current King is <?php currentKing(); ?></div>
+		  <table cellspacing="100" lign="center">
+		    <tr>
+		      <td width="50%" align="center">
+			<div class="imgRounded"><img src="../img/NickHeadden.jpg"></div>
+			<br>
+			<?php
+			
+			  echo "<div class='fontRegularWhite'> Nick Headden: ".$votesNick = voteNick()."</div>";
+
+			?>
+		      </td>
+		      <td width="50%" align="center">
+			<div class="imgRounded"><img src="../img/ClayPratt.jpg"></div>
+			<br>
+			<?php
+			
+			  echo "<div class='fontRegularWhite'> Clay Pratt: ".$votesClay = voteClay()."</div>";
+
+			?>
+		      </td>
+		    </tr>
+		    <tr>
+		      <td width="50%" align="center">
+			<div class="imgRounded"><img src="../img/TrevorPickett.jpg"></div>
+			<br>
+			<?php
+			  
+			  echo "<div class='fontRegularWhite'> Trevor Pickett: ".$votesTrevor = voteTrevor()."</div>";
+			
+			?>
+		      </td>
+		      <td width="50%" align="center">
+			<div class="imgRounded"><img src="../img/KyleBrooks.jpg"></div>
+			<br>
+			<?php
+			  
+			  echo "<div class='fontRegularWhite'> Kyle Brooks: ".$votesKyle = voteKyle()."</div>";
+			
+			?>
+		      </td>
+		    </tr>
+		  </table>
+		</td>
+	      </tr>
+	      <tr>
+		<td align="center"  width="50%">
+		  <div class='fontRegularWhite'> Current Queen is <?php currentQueen(); ?></div>
+		  <br>
+		  <table cellspacing="100" lign="center">
+		    <tr>
+		      <td width="50%" align="center">
+			<div class="imgRounded"><img src="../img/JamieDavis.jpg"></div></a>
+			<br>
+			<?php
+			
+			  echo "<div class='fontRegularWhite'> Jamie Davis: ".$votesJamie = voteJamie()."</div>";
+
+			?>
+		      </td>
+		    </tr>
+	    	    <tr>
+		      <td width="50%" align="center">
+			<div class="imgRounded"><img src="../img/ChelseaHelms.jpg"></div></a>
+			<br>
+			<?php
+			  
+			  echo "<div class='fontRegularWhite'> Chelsea Helms: ".$votesChelsea = voteChelsea()."</div>";
+			
+			?>
+		      </td>
+		      <td width="50%" align="center">
+			<div class="imgRounded"><img src="../img/MeaganSavage.jpg"></div></a>
+			<br>
+			<?php
+										  
+			  echo "<div class='fontRegularWhite'> Meagan Savage: ".$votesMeagan = voteMeagan()."</div>";
+			
+			?>
+		      </td>
+		    </tr>
+		  </table>
+		</td>
+	      </tr>
+	    </table>
+	    <br>
+	    <br>
+	    <br>
+	    <br>
+	    <div class="fontFooterWhite">Created by David Johnson | Graphics by Lynn Smith</div>
+	    <br>
+	  </div>
+	</div>
+    </center>
   </body>
 </html>

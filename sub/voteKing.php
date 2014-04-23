@@ -8,55 +8,55 @@ THIS WEB APP IS OPEN SOURCE. CREATED BY: DAVID JOHNSON AND LYNN SMITH.*/
 <html>
   <head>
     <title> FMHS Prom Voting </title>
-		<link rel="stylesheet" type="text/css" href="../stylesheet.css">
-		<link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono:700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="../stylesheet.css">
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono:700' rel='stylesheet' type='text/css'>
   </head>
-  <body bgcolor="#22313F">
-		<center>
-			<div id="wrap">
-				<div id="header">
-					<div class="fontHeaderPurple">FMHS Prom</div>
-				</div>
-				<div id="main">
-					<br>
-					<br>
-					<br>
-					<div class="fontHeaderWhite">Tap a picture to vote</div>
-					<br>
-					<table cellspacing="100" lign="center">
-						<tr>
-							<td width="50%" align="center">
-								<a href="../scripts/voteKing.php?name=Nick"><div class="circleDefault"></div></a>
-								<br>
-								<div class="fontRegularWhite"> Nick Headden </div>
-							</td>
-							<td width="50%" align="center">
-								<a href="../scripts/voteKing.php?name=Clay"><div class="circleDefault"></div></a>
-								<br>
-								<div class="fontRegularWhite"> Clay Pratt </div>
-							</td>
-						</tr>
-						<tr>
-							<td width="50%" align="center">
-								<a href="../scripts/voteKing.php?name=Trevor"><div class="circleDefault"></div></a>
-								<br>
-								<div class="fontRegularWhite"> Trevor Pickett </div>
-							</td>
-							<td width="50%" align="center">
-								<a href="../scripts/voteKing.php?name=Kyle"><div class="circleDefault"></div></a>
-								<br>
-								<div class="fontRegularWhite"> Kyle Brooks </div>
-							</td>
-						</tr>
-					</table>
-					<br>
-					<br>
-					<br>
-					<br>
-					<div class="fontFooterWhite">Created By David Johnson</div>
-					<br>
-				</div>
-			</div>
-		</center>
+  <body bgcolor="#506dff">
+    <center>
+      <div id="wrap">
+	<div id="header">
+	  <div class="fontHeaderPurple">FMHS Prom</div>
+	</div>
+	<div id="main">
+	  <br>
+	  <br>
+	  <br>
+	  <div class="fontHeaderWhite">Tap a picture to vote</div>
+	  <br>
+	  <table cellspacing="100" lign="center">
+	    <tr>
+	      <td width="50%" align="center">
+		<a href="../scripts/voteKing.php?name=Nick"><div class="imgRounded"><img src="../img/NickHeadden.jpg"></div></a>
+		<br>
+		<div class="fontRegularWhite"> Nick Headden </div>
+	      </td>
+	      <td width="50%" align="center">
+		<a href="../scripts/voteKing.php?name=Clay"><div class="imgRounded"><img src="../img/ClayPratt.jpg"></div></a>
+		<br>
+		<div class="fontRegularWhite"> Clay Pratt </div>
+	      </td>
+	    </tr>
+	    <tr>
+	      <td width="50%" align="center">
+		<a href="../scripts/voteKing.php?name=Trevor"><div class="imgRounded"><img src="../img/TrevorPickett.jpg"></div></a>
+		<br>
+		<div class="fontRegularWhite"> Trevor Pickett </div>
+	      </td>
+	      <td width="50%" align="center">
+		<a href="../scripts/voteKing.php?name=Kyle"><div class="imgRounded"><img src="../img/KyleBrooks.jpg"></div></a>
+		<br>
+		<div class="fontRegularWhite"> Kyle Brooks </div>
+	      </td>
+	    </tr>
+	  </table>
+	  <br>
+	  <br>
+	  <br>
+	  <br>
+	  <div class="fontFooterWhite">Created by David Johnson | Graphics by Lynn Smith</div>
+	  <br>
+	</div>
+      </div>
+    </center>
   </body>
 </html>

@@ -12,7 +12,7 @@ THIS WEB APP IS OPEN SOURCE. CREATED BY: DAVID JOHNSON AND LYNN SMITH.*/
     <link rel="stylesheet" type="text/css" href="../stylesheet.css">
     <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono:700' rel='stylesheet' type='text/css'>
   </head>
-  <body bgcolor="#22313F">
+  <body bgcolor="#506dff">
     <center>
       <div id="wrap">
 	<div id="header">
@@ -27,17 +27,17 @@ THIS WEB APP IS OPEN SOURCE. CREATED BY: DAVID JOHNSON AND LYNN SMITH.*/
 	<table cellspacing="100" lign="center">
 	  <tr>
 	    <td width="33%" align="center">
-	      <a href="../scripts/voteQueen.php?name=Jamie"><div class="circleDefault"></div></a>
+	      <a href="../scripts/voteQueen.php?name=Jamie"><div class="imgRounded"><img src="../img/JamieDavis.jpg"></div></a>
 	      <br>
 	      <div class="fontRegularWhite"> Jamie Davis </div>
 	    </td>
 	    <td width="33%" align="center">
-	      <a href="../scripts/voteQueen.php?name=Chelsea"><div class="circleDefault"></div></a>
+	      <a href="../scripts/voteQueen.php?name=Chelsea"><div class="imgRounded"><img src="../img/ChelseaHelms.jpg"></div></a>
 	      <br>
 	      <div class="fontRegularWhite"> Chelsea Helms </div>
 	    </td>
 	    <td width="33%" align="center">
-	      <a href="../scripts/voteQueen.php?name=Meagan"><div class="circleDefault"></div></a>
+	      <a href="../scripts/voteQueen.php?name=Meagan"><div class="imgRounded"><img src="../img/MeaganSavage.jpg"></div></a>
 	      <br>
 	      <div class="fontRegularWhite"> Meagan Savage </div>
 	    </td>
@@ -47,7 +47,7 @@ THIS WEB APP IS OPEN SOURCE. CREATED BY: DAVID JOHNSON AND LYNN SMITH.*/
 	<br>
 	<br>
 	<br>
-	<div class="fontFooterWhite">Created By David Johnson</div>
+	<div class="fontFooterWhite">Created by David Johnson | Graphics by Lynn Smith</div>
 	<br>
 	</div>
       </div>
