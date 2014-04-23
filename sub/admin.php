@@ -1,14 +1,5 @@
 <?php
   
-  /*
-    ALL CODE INCLUDED IS WRITTEN UNDER THE OPEN SOURCE SOFTWARE INTIATIVE, PLEASE
-    USE THE CODE AS YOU WOULD LIKE. ALL CODE, GUI, IMAGES, AND OTHER DATA INCLUDED IN 
-    THIS WEB APP IS OPEN SOURCE. CREATED BY: DAVID JOHNSON AND LYNN SMITH.*/
-	
-    //CODE STARTS BELOW HERE//
-
-  */
-
   //getting the connection variables 
   include '../scripts/connection.php';
 	
@@ -181,7 +172,7 @@
 		  <table cellspacing="100" lign="center">
 		    <tr>
 		      <td width="50%" align="center">
-			<div class="imgRounded"><img src="../img/NickHeadden.jpg"></div>
+			<div class="imgRounded"><img src="../img/NickHeadden.png" width="75%"></div>
 			<br>
 			<?php
 			
@@ -190,7 +181,7 @@
 			?>
 		      </td>
 		      <td width="50%" align="center">
-			<div class="imgRounded"><img src="../img/ClayPratt.jpg"></div>
+			<div class="imgRounded"><img src="../img/ClayPratt.png" width="75%"></div>
 			<br>
 			<?php
 			
@@ -201,7 +192,7 @@
 		    </tr>
 		    <tr>
 		      <td width="50%" align="center">
-			<div class="imgRounded"><img src="../img/TrevorPickett.jpg"></div>
+			<div class="imgRounded"><img src="../img/TrevorPickett.png" width="75%"></div>
 			<br>
 			<?php
 			  
@@ -210,7 +201,7 @@
 			?>
 		      </td>
 		      <td width="50%" align="center">
-			<div class="imgRounded"><img src="../img/KyleBrooks.jpg"></div>
+			<div class="imgRounded"><img src="../img/KyleBrooks.png" width="75%"></div>
 			<br>
 			<?php
 			  
@@ -228,8 +219,8 @@
 		  <br>
 		  <table cellspacing="100" lign="center">
 		    <tr>
-		      <td width="50%" align="center">
-			<div class="imgRounded"><img src="../img/JamieDavis.jpg"></div></a>
+		      <td width="33%" align="center">
+			<div class="imgRounded"><img src="../img/JamieDavis.png" width="75%"></div></a>
 			<br>
 			<?php
 			
@@ -237,10 +228,8 @@
 
 			?>
 		      </td>
-		    </tr>
-	    	    <tr>
-		      <td width="50%" align="center">
-			<div class="imgRounded"><img src="../img/ChelseaHelms.jpg"></div></a>
+		      <td width="33%" align="center">
+			<div class="imgRounded"><img src="../img/ChelseaHelms.png" width="75%"></div></a>
 			<br>
 			<?php
 			  
@@ -248,8 +237,8 @@
 			
 			?>
 		      </td>
-		      <td width="50%" align="center">
-			<div class="imgRounded"><img src="../img/MeaganSavage.jpg"></div></a>
+		      <td width="33%" align="center">
+			<div class="imgRounded"><img src="../img/MeganSavage.png" width="75%"></div></a>
 			<br>
 			<?php
 										  

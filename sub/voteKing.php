@@ -26,24 +26,24 @@ THIS WEB APP IS OPEN SOURCE. CREATED BY: DAVID JOHNSON AND LYNN SMITH.*/
 	  <table cellspacing="100" lign="center">
 	    <tr>
 	      <td width="50%" align="center">
-		<a href="../scripts/voteKing.php?name=Nick"><div class="imgRounded"><img src="../img/NickHeadden.jpg"></div></a>
+		<a href="../scripts/voteKing.php?name=Nick"><div class="imgRounded"><img src="../img/NickHeadden.png" width="75%"></div></a>
 		<br>
 		<div class="fontRegularWhite"> Nick Headden </div>
 	      </td>
 	      <td width="50%" align="center">
-		<a href="../scripts/voteKing.php?name=Clay"><div class="imgRounded"><img src="../img/ClayPratt.jpg"></div></a>
+		<a href="../scripts/voteKing.php?name=Clay"><div class="imgRounded"><img src="../img/ClayPratt.png" width="75%"></div></a>
 		<br>
 		<div class="fontRegularWhite"> Clay Pratt </div>
 	      </td>
 	    </tr>
 	    <tr>
 	      <td width="50%" align="center">
-		<a href="../scripts/voteKing.php?name=Trevor"><div class="imgRounded"><img src="../img/TrevorPickett.jpg"></div></a>
+		<a href="../scripts/voteKing.php?name=Trevor"><div class="imgRounded"><img src="../img/TrevorPickett.png" width="75%"></div></a>
 		<br>
 		<div class="fontRegularWhite"> Trevor Pickett </div>
 	      </td>
 	      <td width="50%" align="center">
-		<a href="../scripts/voteKing.php?name=Kyle"><div class="imgRounded"><img src="../img/KyleBrooks.jpg"></div></a>
+		<a href="../scripts/voteKing.php?name=Kyle"><div class="imgRounded"><img src="../img/KyleBrooks.png" width="75%"></div></a>
 		<br>
 		<div class="fontRegularWhite"> Kyle Brooks </div>
 	      </td>

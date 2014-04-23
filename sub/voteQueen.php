@@ -27,17 +27,17 @@ THIS WEB APP IS OPEN SOURCE. CREATED BY: DAVID JOHNSON AND LYNN SMITH.*/
 	<table cellspacing="100" lign="center">
 	  <tr>
 	    <td width="33%" align="center">
-	      <a href="../scripts/voteQueen.php?name=Jamie"><div class="imgRounded"><img src="../img/JamieDavis.jpg"></div></a>
+	      <a href="../scripts/voteQueen.php?name=Jamie"><div class="imgRounded"><img src="../img/JamieDavis.png" width="75%"></div></a>
 	      <br>
 	      <div class="fontRegularWhite"> Jamie Davis </div>
 	    </td>
 	    <td width="33%" align="center">
-	      <a href="../scripts/voteQueen.php?name=Chelsea"><div class="imgRounded"><img src="../img/ChelseaHelms.jpg"></div></a>
+	      <a href="../scripts/voteQueen.php?name=Chelsea"><div class="imgRounded"><img src="../img/ChelseaHelms.png" width="75%"></div></a>
 	      <br>
 	      <div class="fontRegularWhite"> Chelsea Helms </div>
 	    </td>
 	    <td width="33%" align="center">
-	      <a href="../scripts/voteQueen.php?name=Meagan"><div class="imgRounded"><img src="../img/MeaganSavage.jpg"></div></a>
+	      <a href="../scripts/voteQueen.php?name=Meagan"><div class="imgRounded"><img src="../img/MeganSavage.png" width="75%"></div></a>
 	      <br>
 	      <div class="fontRegularWhite"> Meagan Savage </div>
 	    </td>
