@@ -9,10 +9,11 @@
   mysql_select_db($databaseName);
 
   //requesting the name that was sent from the name selection index page
-  $name =$_REQUEST['name'];
+  $id = $_REQUEST['id'];
 	
   //running the query so the name can be deleted and not be shown again for voting
-  mysql_query("DELETE FROM promnames WHERE name = '$name'");
+  mysql_query("DELETE FROM promnames WHERE id = '$id'");
+
 	
   //redirecting to the queen voting page
   header("Location: ../sub/voteQueen.php");

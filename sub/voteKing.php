@@ -15,8 +15,8 @@ THIS WEB APP IS OPEN SOURCE. CREATED BY: DAVID JOHNSON AND LYNN SMITH.*/
     <center>
       <div id="wrap">
 	<div id="header">
-	  <div class="fontHeaderPurple">FMHS Prom</div>
-	</div>
+	  <img src="../img/kingbanner.png">
+ 	</div>
 	<div id="main">
 	  <br>
 	  <br>
@@ -51,9 +51,7 @@ THIS WEB APP IS OPEN SOURCE. CREATED BY: DAVID JOHNSON AND LYNN SMITH.*/
 	  </table>
 	  <br>
 	  <br>
-	  <br>
-	  <br>
-	  <div class="fontFooterWhite">Created by David Johnson | Graphics by Lynn Smith</div>
+	  <br>	  
 	  <br>
 	</div>
       </div>

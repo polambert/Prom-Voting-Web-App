@@ -13,7 +13,16 @@
 
 #main{
   width:100%;
-  background-color:#506dff;
+  background-color:#6383fc;
+}
+
+#mainIndex{
+  width:100%;
+  background-color:#6383fc;
+  background-image: url('img/crownmain.png');
+  background-repeat:no-repeat;
+  background-position: center;
+  background-size:500px 500px;
 }
 
 .fontHeaderPurple{
@@ -47,21 +56,38 @@
 }
 
 .styleSearchBox{
-  width: 350px;
-  height: 75px;
+  width: 200px;
+  height: 50px;
   border: 1px double #ffffff; 
-  border-radius: 12px; 
+  border-radius: 5px; 
   box-shadow: 0 0 3px #ffffff; 
-  font-size: 45px;
-  color: #9B59B6; 
+  font-size: 30px;
+  color: #6383fc; 
   outline: none; 
   text-align: center;
   vertical-align: middle;
-  line-height: 85px; 
+  line-height: 50px; 
 }
 
 .imgRounded{
   border-radius: 5px;
 }
 
+#crownMain{
+  background-image: url('img/crownMain.png');
+  width:300px;
+  height: 400px;
+}
+
+input[type=submit] {
+  width: 200px;
+  height: 35px;
+  background-color: #FFFFFF;
+  color: #6383fc;
+  font-size: 30px;
+  border-radius: 5px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 35px;  
+}
 

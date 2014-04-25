@@ -24,7 +24,7 @@ THIS WEB APP IS OPEN SOURCE. CREATED BY: DAVID JOHNSON*/
 		
     /*a mysql command to select the name that is most like the name that the student entered,
     this is sort of like a search function only super basic*/
-    $findStudent = "SELECT name FROM promnames WHERE name LIKE '%".$name."%'";
+    $findStudent = "SELECT * FROM promnames WHERE name LIKE '%".$name."%'";
 		
     //running the basic search command
     $runFindStudent = mysql_query($findStudent);
@@ -40,33 +40,42 @@ THIS WEB APP IS OPEN SOURCE. CREATED BY: DAVID JOHNSON*/
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
     <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono:700' rel='stylesheet' type='text/css'>
   </head>
-  <body bgcolor="#506dff">
+  <body bgcolor="#6383fc">
     <center>
       <div id="wrap">
 	<div id="header">
 	  <img src="img/logo.png" alt="logo" width="25%">
 	</div>
+	<br>
+	<br>
+	<br>
 	<div id="main">
-	  <br>
-	  <br>
-	  <div class="fontHeaderWhite">Search your first or last name</div>
-	  <br>
 	  <form method="POST" action="index.php">
-	    <table>
-	      <tr>
-		<td align="center">
-		  <input class="styleSearchBox" type="text" name="studentName">
-		</td>
-		<td align="center">
-		  <input type="image" src="img/search.png" width="150%" class="styleSearchBoxButton">
-		</td>
-	      </tr>
-	    </table>
+	      <br>
+	      <br>
+	      <br>
+	      <br>
+	      <bR>
+	      <br>
+	      <table>
+		<tr>
+		  <td align="center">
+		    <input class="styleSearchBox" type="text" name="studentName">
+		  </td>
+		</tr>
+		<tr>
+		  <td align="center">
+		    <input type="submit" value="Find Me">
+		  </td>
+		</tr>
+	      </table>
 	  </form>
+		
 	  <br>
 	  <br>
 	  <br>
 	  <br>
+	  </div>
 	  <?php
             
             //if the student submitted a name then the script will run
@@ -90,10 +99,10 @@ THIS WEB APP IS OPEN SOURCE. CREATED BY: DAVID JOHNSON*/
 		  echo "<br><div class='fontRegularWhite'>".$names['name']."</div></br></td>";
 									
                   //set a variable to the name data that the student clicked/tapped
-                  $names = $names['name'];
-                  
+                  $id = $names['id'];
+
                   //echoing the image that is actually linked to a delete script 
-		  echo "<td><a href='scripts/removeStudent.php?name=$names'><img src='img/name.png' width='150%' class='styleSearchBoxButton'></a></td></tr><table>";
+		  echo "<td><a href='scripts/removeStudent.php?id=$id'><img src='img/name.png' width='150%' class='styleSearchBoxButton'></a></td></tr><table>";
 		}
 	      }
 	      else{
@@ -106,7 +115,6 @@ THIS WEB APP IS OPEN SOURCE. CREATED BY: DAVID JOHNSON*/
 	  <br>
 	  <br>
 	  <br>
-	  <div class="fontFooterWhite">Created By David Johnson</div>
 	  <br>
 	  </div>
 	</div>
