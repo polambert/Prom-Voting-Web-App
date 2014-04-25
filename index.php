@@ -51,6 +51,7 @@ THIS WEB APP IS OPEN SOURCE. CREATED BY: DAVID JOHNSON*/
 	<br>
 	<div id="main">
 	  <div id="mainForm">
+	  <img src="img/PromBanner.png" width="100%">
 	  <form method="POST" action="index.php">
 	      <br>
 	      <br>
@@ -70,53 +71,48 @@ THIS WEB APP IS OPEN SOURCE. CREATED BY: DAVID JOHNSON*/
 		  </td>
 		</tr>
 	      </table>
+	      <?php
+            
+            	//if the student submitted a name then the script will run
+	    	if (isset($_POST['studentName'])){
+              
+              	/*if there was more then one row found then it will run the block of code that displays all of the 
+              	names that were found*/
+	      	if ($rowsFound > 0){
+                
+		  //echoing out the instructions for the user
+		  echo "<br><div class='fontHeaderWhite'> Press the person button is you find your name.</div></br>";	
+                
+		  /*while the array hasn't been completely been echoed out then the echoing process of all the names
+		  keep going out and*/
+		  while ($names = mysql_fetch_array($runFindStudent)){
+									
+		    //starting the table here so its easier to understand
+		    echo "<table><tr><td>";
+                  
+		    //Then it echos the the name inside the first table column
+		    echo "<br><div class='fontRegularWhite'>".$names['name']."</div></br></td>";
+									
+		    //set a variable to the name data that the student clicked/tapped
+		    $id = $names['id'];
+
+		    //echoing the image that is actually linked to a delete script 
+		    echo "<td><a href='scripts/removeStudent.php?id=$id'><img src='img/name.png' width='150%' class='styleSearchBoxButton'></a></td></tr><table>";
+		  }
+		}
+		else{
+		  //if the students name isnt found then a friendly error message is echoed out
+		  echo "<br><div class='fontHeaderWhite'> Name not found! </div></br>";	
+		}
+	      }
+	    ?>
 	  </form>
 	  </div>	
 	  <br>
 	  <br>
 	  <br>
 	  <br>
-	  </div>
-	  <?php
-            
-            //if the student submitted a name then the script will run
-	    if (isset($_POST['studentName'])){
-              
-              /*if there was more then one row found then it will run the block of code that displays all of the 
-              names that were found*/
-	      if ($rowsFound > 0){
-                
-                //echoing out the instructions for the user
-		echo "<br><div class='fontHeaderWhite'> Press the person button is you find your name.</div></br>";	
-                
-                /*while the array hasn't been completely been echoed out then the echoing process of all the names
-                keep going out and*/
-		while ($names = mysql_fetch_array($runFindStudent)){
-									
-                  //starting the table here so its easier to understand
-                  echo "<table><tr><td>";
-                  
-                  //Then it echos the the name inside the first table column
-		  echo "<br><div class='fontRegularWhite'>".$names['name']."</div></br></td>";
-									
-                  //set a variable to the name data that the student clicked/tapped
-                  $id = $names['id'];
-
-                  //echoing the image that is actually linked to a delete script 
-		  echo "<td><a href='scripts/removeStudent.php?id=$id'><img src='img/name.png' width='150%' class='styleSearchBoxButton'></a></td></tr><table>";
-		}
-	      }
-	      else{
-                //if the students name isnt found then a friendly error message is echoed out
-		echo "<br><div class='fontHeaderWhite'> Name not found! </div></br>";	
-	      }
-	    }
-	  ?>
-	  <br>
-	  <br>
-	  <br>
-	  <br>
-	  <br>
+	  </div> 
 	  </div>
 	</div>
       </center>
