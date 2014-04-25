@@ -50,6 +50,7 @@ THIS WEB APP IS OPEN SOURCE. CREATED BY: DAVID JOHNSON*/
 	<br>
 	<br>
 	<div id="main">
+	  <div id="mainForm">
 	  <form method="POST" action="index.php">
 	      <br>
 	      <br>
@@ -70,7 +71,7 @@ THIS WEB APP IS OPEN SOURCE. CREATED BY: DAVID JOHNSON*/
 		</tr>
 	      </table>
 	  </form>
-		
+	  </div>	
 	  <br>
 	  <br>
 	  <br>
