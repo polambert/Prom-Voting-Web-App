@@ -11,41 +11,33 @@ THIS WEB APP IS OPEN SOURCE. CREATED BY: DAVID JOHNSON AND LYNN SMITH.*/
     <link rel="stylesheet" type="text/css" href="../stylesheet.css">
     <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono:700' rel='stylesheet' type='text/css'>
   </head>
-  <body bgcolor="#506dff">
+  <body bgcolor="#6383fc">
     <center>
       <div id="wrap">
 	<div id="header">
-	  <img src="../img/kingbanner.png">
+	  <img src="../img/kingbanner.png" width="45%">
  	</div>
 	<div id="main">
 	  <br>
 	  <br>
 	  <br>
-	  <div class="fontHeaderWhite">Tap a picture to vote</div>
+	  <div class="fontHeaderWhite">Tap a Picture to Vote</div>
 	  <br>
-	  <table cellspacing="100" lign="center">
+	  <table cellspacing="10" width="100%" align="center">
 	    <tr>
 	      <td width="50%" align="center">
-		<a href="../scripts/voteKing.php?name=Nick"><div class="imgRounded"><img src="../img/NickHeadden.png" width="75%"></div></a>
-		<br>
-		<div class="fontRegularWhite"> Nick Headden </div>
+		<a href="../scripts/voteKing.php?name=Nick"><div class="imgRounded"><img src="../img/NickHeadden.png" width="50%"></div></a>
 	      </td>
 	      <td width="50%" align="center">
-		<a href="../scripts/voteKing.php?name=Clay"><div class="imgRounded"><img src="../img/ClayPratt.png" width="75%"></div></a>
-		<br>
-		<div class="fontRegularWhite"> Clay Pratt </div>
+		<a href="../scripts/voteKing.php?name=Clay"><div class="imgRounded"><img src="../img/ClayPratt.png" width="50%"></div></a>
 	      </td>
 	    </tr>
 	    <tr>
 	      <td width="50%" align="center">
-		<a href="../scripts/voteKing.php?name=Trevor"><div class="imgRounded"><img src="../img/TrevorPickett.png" width="75%"></div></a>
-		<br>
-		<div class="fontRegularWhite"> Trevor Pickett </div>
+		<a href="../scripts/voteKing.php?name=Trevor"><div class="imgRounded"><img src="../img/TrevorPickett.png" width="50%"></div></a>
 	      </td>
 	      <td width="50%" align="center">
-		<a href="../scripts/voteKing.php?name=Kyle"><div class="imgRounded"><img src="../img/KyleBrooks.png" width="75%"></div></a>
-		<br>
-		<div class="fontRegularWhite"> Kyle Brooks </div>
+		<a href="../scripts/voteKing.php?name=Kyle"><div class="imgRounded"><img src="../img/KyleBrooks.png" width="50%"></div></a>
 	      </td>
 	    </tr>
 	  </table>

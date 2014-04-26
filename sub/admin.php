@@ -150,11 +150,11 @@
     <link rel="stylesheet" type="text/css" href="../stylesheet.css">
     <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono:700' rel='stylesheet' type='text/css'>
   </head>
-  <body bgcolor="#506dff">
+  <body bgcolor="#6383fc">
     <center>
       <div id="wrap">
 	<div id="header">
-	  <div class="fontHeaderPurple">FMHS Prom</div>
+	  <img src="../img/PromBanner.png" width="100%">
 	</div>
 	<div id="main">
 	  <br>
@@ -253,9 +253,8 @@
 	    </table>
 	    <br>
 	    <br>
+	    <a href="../scripts/resetTable.php" style="text-decoration: none;"><div class="button">Reset Votes</div></a>
 	    <br>
-	    <br>
-	    <div class="fontFooterWhite">Created by David Johnson | Graphics by Lynn Smith</div>
 	    <br>
 	  </div>
 	</div>

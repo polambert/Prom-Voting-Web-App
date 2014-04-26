@@ -55,6 +55,7 @@ THIS WEB APP IS OPEN SOURCE. CREATED BY: DAVID JOHNSON*/
 	      <br>
 	      <br>
 	      <br>
+	      <div class="fontRegularWhite">Click the CROWN beside your name</div>
 	      <br>
 	      <bR>
 	      <br>
@@ -87,7 +88,7 @@ THIS WEB APP IS OPEN SOURCE. CREATED BY: DAVID JOHNSON*/
 		  while ($names = mysql_fetch_array($runFindStudent)){
 									
 		    //starting the table here so its easier to understand
-		    echo "<table><tr><td>";
+		    echo "<table width='100%'><tr><td width='60%' align='center'>";
                   
 		    //Then it echos the the name inside the first table column
 		    echo "<br><div class='fontRegularWhite'>".$names['name']."</div></br></td>";
@@ -96,7 +97,7 @@ THIS WEB APP IS OPEN SOURCE. CREATED BY: DAVID JOHNSON*/
 		    $id = $names['id'];
 
 		    //echoing the image that is actually linked to a delete script 
-		    echo "<td><a href='scripts/removeStudent.php?id=$id'><img src='img/name.png' width='150%' class='styleSearchBoxButton'></a></td></tr><table>";
+		    echo "<td width='40%' align='center'><a href='scripts/removeStudent.php?id=$id'><img src='img/PromCrown.png' width='25%' class='styleSearchBoxButton'></a></td></tr><table>";
 		  }
 		}
 		else{

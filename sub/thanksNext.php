@@ -14,17 +14,17 @@ THIS WEB APP IS OPEN SOURCE. CREATED BY: DAVID JOHNSON AND LYNN SMITH.*/
     <link rel="stylesheet" type="text/css" href="../stylesheet.css">
     <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono:700' rel='stylesheet' type='text/css'>
   </head>
-  <body bgcolor="#506dff">
+  <body bgcolor="#6383fc">
     <center>
       <div id="wrap">
 	<div id="header">
-	  <div class="fontHeaderPurple">FMHS Prom</div>
+	  <img src="../img/PromBanner.png" width="100%"> 
 	</div>
 	<div id="main">
 	  <br>
 	  <br>
 	  <br>
-	  <div class="fontHeaderWhite">Thank you for voting! Have a fun, but safe night.</div>
+	  <div class="fontHeaderWhite">Thank you for voting! <br> Have fun and be safe.</div>
 	  <br>
 	  <br>
 	  <br>
