@@ -44,15 +44,14 @@ THIS WEB APP IS OPEN SOURCE. CREATED BY: DAVID JOHNSON*/
     <center>
       <div id="wrap">
 	<div id="header">
-	  <img src="img/logo.png" alt="logo" width="25%">
+	  <img src="img/PromBanner.png" width="100%">
 	</div>
 	<br>
 	<br>
 	<br>
 	<div id="main">
 	  <div id="mainForm">
-	  <img src="img/PromBanner.png" width="100%">
-	  <form method="POST" action="index.php">
+	    <form method="POST" action="index.php">
 	      <br>
 	      <br>
 	      <br>
