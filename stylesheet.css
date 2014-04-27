@@ -29,22 +29,25 @@ body {
 
 .fontHeaderWhite{
   color:#ffffff;
-  font-size: 32px;
+  font-size: 42px;
+  font-style: bold;
 }
 
 
 .fontRegularWhite{
   color:#ffffff;
   font-size: 24px;
+  font-style: bold;
 }
 
 .fontFooterWhite{
   color:#ffffff;
   font-size: 1em;
+  font-style: bold;
 }
 
 .styleSearchBox{
-  width: 200px;
+  width: 400px;
   height: 50px;
   border: 1px double #ffffff; 
   border-radius: 5px; 

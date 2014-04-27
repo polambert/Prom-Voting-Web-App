@@ -256,6 +256,21 @@
 	    <a href="../scripts/resetTable.php" style="text-decoration: none;"><div class="button">Reset Votes</div></a>
 	    <br>
 	    <br>
+	    <form action="../scripts/insertName.php" method="POST">
+	    <table>
+		<tr>
+		  <td align="center">
+		    <input class="styleSearchBox" type="text" name="name">
+		  </td>
+		</tr>
+		<tr>
+		  <td align="center">
+		    <br>
+		    <input type="submit" value="Add Name">
+		  </td>
+		</tr>
+	      </table>
+	    </form>
 	  </div>
 	</div>
     </center>

@@ -23,21 +23,24 @@ THIS WEB APP IS OPEN SOURCE. CREATED BY: DAVID JOHNSON AND LYNN SMITH.*/
 	  <br>
 	  <div class="fontHeaderWhite">Tap a Picture to Vote</div>
 	  <br>
-	  <table cellspacing="10" width="100%" align="center">
+	  <table width="55%" cellspacing="0" cellpadding="0" align="center">
 	    <tr>
 	      <td width="50%" align="center">
-		<a href="../scripts/voteKing.php?name=Nick"><div class="imgRounded"><img src="../img/NickHeadden.png" width="50%"></div></a>
-	      </td>
+		<a href="../scripts/voteKing.php?name=Clay"><div class="imgRounded"><img src="../img/ClayPratt.png" width="100%"></div></a>
+
+			      </td>
 	      <td width="50%" align="center">
-		<a href="../scripts/voteKing.php?name=Clay"><div class="imgRounded"><img src="../img/ClayPratt.png" width="50%"></div></a>
+		<a href="../scripts/voteKing.php?name=Kyle"><div class="imgRounded"><img src="../img/KyleBrooks.png" width="100%"></div></a>
 	      </td>
 	    </tr>
+	  </table>
+	  <table width="55%" cellspacing="0" cellpadding="0" align="center">
 	    <tr>
 	      <td width="50%" align="center">
-		<a href="../scripts/voteKing.php?name=Trevor"><div class="imgRounded"><img src="../img/TrevorPickett.png" width="50%"></div></a>
+		<a href="../scripts/voteKing.php?name=Nick"><div class="imgRounded"><img src="../img/NickHeadden.png" width="100%"></div></a>
 	      </td>
 	      <td width="50%" align="center">
-		<a href="../scripts/voteKing.php?name=Kyle"><div class="imgRounded"><img src="../img/KyleBrooks.png" width="50%"></div></a>
+		<a href="../scripts/voteKing.php?name=Trevor"><div class="imgRounded"><img src="../img/TrevorPickett.png" width="100%"></div></a>
 	      </td>
 	    </tr>
 	  </table>

@@ -54,8 +54,7 @@ THIS WEB APP IS OPEN SOURCE. CREATED BY: DAVID JOHNSON*/
 	    <form method="POST" action="index.php">
 	      <br>
 	      <br>
-	      <br>
-	      <div class="fontRegularWhite">Click the CROWN beside your name</div>
+	      <br> 
 	      <br>
 	      <bR>
 	      <br>
@@ -67,7 +66,8 @@ THIS WEB APP IS OPEN SOURCE. CREATED BY: DAVID JOHNSON*/
 		</tr>
 		<tr>
 		  <td align="center">
-		    <input type="submit" value="Find Me">
+		    <br>
+		    <input type="image" src="img/PromButton.png" width="80%" value="Find Me">
 		  </td>
 		</tr>
 	      </table>
@@ -81,14 +81,14 @@ THIS WEB APP IS OPEN SOURCE. CREATED BY: DAVID JOHNSON*/
 	      	if ($rowsFound > 0){
                 
 		  //echoing out the instructions for the user
-		  echo "<br><div class='fontHeaderWhite'> Press the person button is you find your name.</div></br>";	
+		  echo "<br><div class='fontRegularWhite'>Click the CROWN beside your name</div></br>";	
                 
 		  /*while the array hasn't been completely been echoed out then the echoing process of all the names
 		  keep going out and*/
 		  while ($names = mysql_fetch_array($runFindStudent)){
 									
 		    //starting the table here so its easier to understand
-		    echo "<table width='100%'><tr><td width='60%' align='center'>";
+		    echo "<table width='90%'><tr><td width='50%' align='center'>";
                   
 		    //Then it echos the the name inside the first table column
 		    echo "<br><div class='fontRegularWhite'>".$names['name']."</div></br></td>";
@@ -97,7 +97,7 @@ THIS WEB APP IS OPEN SOURCE. CREATED BY: DAVID JOHNSON*/
 		    $id = $names['id'];
 
 		    //echoing the image that is actually linked to a delete script 
-		    echo "<td width='40%' align='center'><a href='scripts/removeStudent.php?id=$id'><img src='img/PromCrown.png' width='25%' class='styleSearchBoxButton'></a></td></tr><table>";
+		    echo "<td width='50%' align='center'><a href='scripts/removeStudent.php?id=$id'><img src='img/PromCrown.png' width='25%' class='styleSearchBoxButton'></a></td></tr><table>";
 		  }
 		}
 		else{
